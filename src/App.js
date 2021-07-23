@@ -10,7 +10,13 @@ function App() {
           <a href="/characters">Characters</a>
         </nav>
       </header>
-      <main className="App__content"></main>
+      <main className="App__content">
+        <section className="App__content____Home">
+          <h1>Welcome to the Rick and Morty App!</h1>
+          <img src="" alt="" />
+          <h2>Developed by Boris during the neuefische Bootcamp</h2>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.App__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: palevioletred;
+}
+
+.App__navigation {
+  padding: 1em;
+  margin: 1.5em;
+}
+
+a {
+  padding: 1em;
+  margin: 1em;
+}

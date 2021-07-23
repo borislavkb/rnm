@@ -5,3 +5,9 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
+
+.App__content____Image {
+  width: 500px;
+  height: 500px;
+  align-self: center;
+}

@@ -7,7 +7,7 @@ function App() {
         <img src="" alt="Logo" />
         <nav className="App__navigation">
           <a href="/">Home</a>
-          <a href="/"></a>
+          <a href="/characters">Characters</a>
         </nav>
       </header>
       <main className="App__content"></main>

@@ -13,6 +13,11 @@
   margin: 1.5em;
 }
 
+a {
+  padding: 1em;
+  margin: 1em;
+}
+
 img {
   width: 250px;
   height: 150px;

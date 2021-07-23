@@ -1,0 +1,7 @@
+.App__content____Home {
+  background-color: greenyellow;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}

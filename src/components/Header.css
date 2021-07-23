@@ -2,16 +2,20 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
+  height: 20vh;
   background-color: palevioletred;
 }
 
 .App__navigation {
+  display: flex;
+  justify-content: space-around;
   padding: 1em;
   margin: 1.5em;
 }
 
-a {
-  padding: 1em;
-  margin: 1em;
+img {
+  width: 250px;
+  height: 150px;
+  opacity: 0.8;
+  border-radius: 50%;
 }

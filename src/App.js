@@ -1,16 +1,10 @@
 import "./App.css";
 import Home from "./components/Home";
-
+import Header from "./components/Header";
 function App() {
   return (
     <div className="App">
-      <header className="App__header">
-        <img src="" alt="Logo" />
-        <nav className="App__navigation">
-          <a href="/">Home</a>
-          <a href="/characters">Characters</a>
-        </nav>
-      </header>
+      <Header />
       <main className="App__content">
         <Home />
       </main>

@@ -1,8 +1,8 @@
 import "./App.css";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import Header from "./components/Header";
-import CharacterListPage from "./components/CharacterListPage";
-import SingleCharacterPage from "./components/SingleCharacterPage";
+import CharacterListPage from "./pages/CharacterListPage";
+import SingleCharacterPage from "./pages/SingleCharacterPage";
 
 function App() {
   return (

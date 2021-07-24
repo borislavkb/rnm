@@ -1,6 +1,6 @@
 import "./CharacterListPage.css";
-import CharacterCard from "./CharacterCard";
-import Form from "./Form";
+import CharacterCard from "../components/CharacterCard";
+import Form from "../components/Form";
 
 export default function CharacterListPage() {
   return (

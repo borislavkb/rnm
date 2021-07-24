@@ -1,0 +1,17 @@
+.character__list____card {
+  background-color: hotpink;
+  width: 80vw;
+  padding: 2em;
+  margin: 1em;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.character__list____img {
+  width: 100%;
+  display: block;
+  max-height: 200px;
+  object-fit: contain;
+  object-position: top center;
+  margin-bottom: 1em;
+}

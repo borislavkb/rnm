@@ -2,45 +2,31 @@ import "./CharacterListPage.css";
 import CharacterCard from "../components/CharacterCard";
 import Form from "../components/Form";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function CharacterListPage() {
-  const mockArray = [
-    {
-      id: 1,
-      name: "Rick Sanchez",
-      status: "Alive",
-      species: "Human",
-      type: "",
-      gender: "Male",
-      origin: {
-        name: "Earth",
-        url: "https://rickandmortyapi.com/api/location/1",
-      },
-      location: {
-        name: "Earth",
-        url: "https://rickandmortyapi.com/api/location/20",
-      },
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      episode: [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
-      ],
-      url: "https://rickandmortyapi.com/api/character/1",
-      created: "2017-11-04T18:48:46.250Z",
-    },
-  ];
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const url = "https://rickandmortyapi.com/api/character?page=1";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setCharacters(data.results);
+      });
+  }, []);
 
   return (
     <section className="characters">
       <Form />
       <ul className="character__list">
-        {mockArray.map((mockChar) => {
+        {characters.map((character) => {
           return (
             <Link
-              key={mockChar.id}
-              to={`/characters/singleCharacterPage/${mockChar.id}`}
+              key={character.id}
+              to={`/characters/singleCharacterPage/${character.id}`}
             >
-              <CharacterCard name={mockChar.name} imageSrc={mockChar.image} />
+              <CharacterCard name={character.name} imageSrc={character.image} />
             </Link>
           );
         })}

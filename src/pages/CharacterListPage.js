@@ -16,21 +16,23 @@ export default function CharacterListPage() {
       });
   }, []);
 
+  function renderCharacters() {
+    return characters.map((character) => {
+      return (
+        <Link
+          key={character.id}
+          to={`/characters/singleCharacterPage/${character.id}`}
+        >
+          <CharacterCard name={character.name} imageSrc={character.image} />
+        </Link>
+      );
+    });
+  }
+
   return (
     <section className="characters">
       <Form />
-      <ul className="character__list">
-        {characters.map((character) => {
-          return (
-            <Link
-              key={character.id}
-              to={`/characters/singleCharacterPage/${character.id}`}
-            >
-              <CharacterCard name={character.name} imageSrc={character.image} />
-            </Link>
-          );
-        })}
-      </ul>
+      <ul className="character__list">{renderCharacters()}</ul>
     </section>
   );
 }

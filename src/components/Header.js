@@ -1,5 +1,6 @@
 import "./Header.css";
 import image_logo from "../images/logo.png";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,8 +11,8 @@ export default function Header() {
         alt="Rick and Morty"
       />
       <nav className="App__navigation">
-        <a href="/">Home</a>
-        <a href="/characters">Characters</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/characters">Characters</NavLink>
       </nav>
     </header>
   );

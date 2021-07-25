@@ -7,14 +7,20 @@ import { useEffect, useState } from "react";
 export default function CharacterListPage() {
   const [characters, setCharacters] = useState([]);
 
+  const [totalPages, setTotalPages] = useState();
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
-    const url = "https://rickandmortyapi.com/api/character?page=1";
+    const url = `https://rickandmortyapi.com/api/character?page=${page}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters(data.results);
+        setCharacters((prevCharacters) => {
+          return [...prevCharacters, ...data.results];
+        });
+        setTotalPages(data.info.pages);
       });
-  }, []);
+  }, [page]);
 
   function renderCharacters() {
     return characters.map((character) => {
@@ -33,10 +39,17 @@ export default function CharacterListPage() {
     });
   }
 
+  function handleLoadMore() {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
+  }
+
   return (
     <section className="characters">
       <Form />
       <ul className="character__list">{renderCharacters()}</ul>
+      {page < totalPages && <button onClick={handleLoadMore}>Show more</button>}
     </section>
   );
 }

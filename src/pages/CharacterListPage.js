@@ -23,7 +23,11 @@ export default function CharacterListPage() {
           key={character.id}
           to={`/characters/singleCharacterPage/${character.id}`}
         >
-          <CharacterCard name={character.name} imageSrc={character.image} />
+          <CharacterCard
+            name={character.name}
+            imageSrc={character.image}
+            charStatus={character.status}
+          />
         </Link>
       );
     });

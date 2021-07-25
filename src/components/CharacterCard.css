@@ -15,3 +15,30 @@
   object-position: top center;
   margin-bottom: 1em;
 }
+
+.character__list____card--Alive {
+  background-color: yellowgreen;
+
+  padding: 2em;
+  margin: 1em;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.character__list____card--Dead {
+  background-color: red;
+
+  padding: 2em;
+  margin: 1em;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.character__list____card--unknown {
+  background-color: lightblue;
+
+  padding: 2em;
+  margin: 1em;
+  border-radius: 5px;
+  list-style: none;
+}
